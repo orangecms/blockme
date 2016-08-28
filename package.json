@@ -1,0 +1,26 @@
+{
+  "name": "blockme",
+  "version": "1.0.0",
+  "description": "Demo for blocking and non-blocking functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@git.coding4schoki.org/cyrevolt/blockme.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "blocking"
+  ],
+  "author": "Daniel Maslowski <daniel.maslowski@shop.co> (https://shop.co/)",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jasmine-expect": "^3.0.1"
+  }
+}
