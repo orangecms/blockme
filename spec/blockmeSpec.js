@@ -6,7 +6,7 @@ class Timer {
     this.stop = this.stop.bind(this);
     this.promise = new Promise((resolve, reject) => {
       const startTime = new Date();
-      const timeout = 1000;
+      const timeout = 10;
       setTimeout(() => {
         const timeTaken = new Date() - startTime;
         console.info(`\n\n--- Time taken: ${timeTaken}ms ---`);
@@ -44,7 +44,7 @@ describe('blockme', () => {
         expect(blocker.isDone()).toEqual(true);
         done();
       });
-    blocker.blockMe(1000 * 1000 * 1000); // a billion
+    blocker.blockMe(1000 * 1000); // a million
   });
 });
 
@@ -62,6 +62,6 @@ describe('blockmenot', () => {
         done();
       })
       .catch(() => expect(blocker.isDone()).toEqual(false));
-    blocker.blockMeNot(1000 * 1000 * 1000); // a billion
+    blocker.blockMeNot(1000 * 1000); // a million
   });
 });
